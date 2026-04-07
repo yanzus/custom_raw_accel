@@ -1918,15 +1918,16 @@ function clearTracker() {
   }
 }
 
-</script>
-</body>
+// ────── NOTIFY FUNCTION ──────
+function notify(msg) {
   const n = document.getElementById('notif');
+  if (!n) return;
   document.getElementById('notif-msg').textContent = msg;
   n.classList.add('show');
   setTimeout(() => n.classList.remove('show'), 2400);
 }
 
-// ────── INIT TYPE INFO ──────
+// ────── FINAL INITIALIZATION ──────
 document.getElementById('type-info').innerHTML = TYPE_INFO['natural'];
 
 </script>
